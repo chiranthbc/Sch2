@@ -1,4 +1,4 @@
-<!-- ModalForm.svelte -->
+<!-- ModalTask.svelte -->
 <script>
   import { createEventDispatcher } from "svelte";
 

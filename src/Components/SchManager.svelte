@@ -1,3 +1,5 @@
+<!-- SchManager.svelte -->
+
 <script lang="ts">
   interface Task {
     schName: string;
@@ -115,7 +117,10 @@
     </div>
     <div class="modal">
       {#if formModal}
-        <ModalSch on:submit={handleFormSubmit} />
+        <ModalSch
+          on:submit={handleFormSubmit}
+          on:close={() => (formModal = false)}
+        />
       {/if}
     </div>
   </div>

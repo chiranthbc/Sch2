@@ -1,3 +1,4 @@
+<!-- TaskManager.svelte -->
 <script lang="ts">
   interface Task {
     taskName: string;
@@ -104,7 +105,10 @@
     </div>
     <div class="modal">
       {#if formModal}
-        <ModalTask on:submit={handleFormSubmit} />
+        <ModalTask
+          on:submit={handleFormSubmit}
+          on:close={() => (formModal = false)}
+        />
       {/if}
     </div>
   </div>
